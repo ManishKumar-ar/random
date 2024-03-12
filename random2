@@ -1,0 +1,25 @@
+TextField(value = newTextValue, onValueChange = {
+               newTextValue = it
+           },
+               label = {
+                    Text(text = "Enter Your email")
+               },
+             //  maxLines = 2
+               singleLine = true,
+               modifier = Modifier.width(300.dp),
+               placeholder = {
+                   Text(text = "text@gamil.com")
+               },
+              leadingIcon = {
+                  Icon(imageVector = Icons.Outlined.Email, contentDescription = "")
+              },
+               trailingIcon = {
+                   IconButton(onClick = {
+                       Toast.makeText(context,newTextValue,Toast.LENGTH_SHORT).show()
+
+                   }) {
+                       Icon(imageVector = Icons.Outlined.Send, contentDescription ="" )
+                   }
+               }
+
+           )
