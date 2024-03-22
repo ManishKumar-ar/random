@@ -1,0 +1,78 @@
+sealed class Shape( val name : String){
+    abstract fun area() : Float
+    
+    class Circle( val radius : Float) : Shape("circle"){
+        override fun area() : Float {
+        return Math.PI.toFloat().times(radius).times(radius)
+            
+            
+        }
+        
+    }
+    class Rectangle (val lenght : Float,val breadth : Float) : Shape("rectangle"){
+         override fun area() : Float {
+        return length.times(width)
+            
+            
+        }
+    }
+    class Triangle(val base : Float,val height : Float) : Shape("triangle"){
+          override fun area() : Float {
+        return 0.5f.times(base).times(height)
+            
+            
+        }
+        
+    }
+}
+
+
+fun shapeType(shape: Shape){
+    when(shape){
+        is Shape.Circle ->{
+            print("Cirlce")
+        }
+        is Shape.Triangle ->{
+             print("Triangle")
+        }
+        is Shape.Rectangle ->{
+             print("Rectangle")
+        }
+    }
+}
+
+fun main()
+{
+    val circle= Shape.Circle(7f)
+    circle.name
+    circle.radius
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
