@@ -7,3 +7,5 @@ for video number 20
 
 ![image](https://github.com/ManishKumar-ar/random/assets/134220511/adfcba07-4580-4b65-b75c-6bd063ea1e04)
 for video 22
+![image](https://github.com/ManishKumar-ar/random/assets/134220511/46966040-eb0e-43da-8eb6-f678d8f257e4)
+for video 22.1
