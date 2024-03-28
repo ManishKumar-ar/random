@@ -60,7 +60,7 @@ fun HomeScreen(navController: NavHostController) {
         )
 
         Button(onClick = {
-//            navController.navigate("Details/$nameValue/$ageValue")
+//            navController.navigate("Details/$nameValue/$ageValue")          // this will give an error
             navController.navigate("Details?name=$nameValue&age =$ageValue")
         }) {
             Text(text = "Press data", fontSize = 30.sp)
