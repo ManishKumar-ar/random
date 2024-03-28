@@ -60,8 +60,8 @@ fun HomeScreen(navController: NavHostController) {
         )
 
         Button(onClick = {
-//            navController.navigate("Details/$nameValue/$ageValue")          // this will give an error
-            navController.navigate("Details?name=$nameValue&age =$ageValue")
+//            navController.navigate("Details/$nameValue/$ageValue")          // this will we use when the user is bind to write all of its input, there is no default come in this
+         navController.navigate("Details?name=$nameValue&age =$ageValue")
         }) {
             Text(text = "Press data", fontSize = 30.sp)
 
