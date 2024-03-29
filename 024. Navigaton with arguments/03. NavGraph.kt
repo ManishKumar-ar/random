@@ -15,7 +15,10 @@ fun Nav() {
         composable("Home"){
             HomeScreen(navController)
         }
-        composable("Details?name={name}&age={age}",
+        composable(
+            
+            route  =   "Details?name={name}&age={age}",    // when we allow the user to leave empty the fields
+            //route = "Details/{name}/{age}"             // this is used when we don't any default
             arguments = listOf(
                 navArgument(name = "name"){
                     type = NavType.StringType
