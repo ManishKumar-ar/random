@@ -11,4 +11,5 @@ for video 22.1
 for video 26
 ![image](https://github.com/ManishKumar-ar/random/assets/134220511/519b4a6c-45fb-4e87-b870-77e7ee1a02b3)
 for video28.1
-
+![image](https://github.com/ManishKumar-ar/random/assets/134220511/db016b92-2ce6-4c81-8e25-afd77c6bcf93)
+for video 28.2
