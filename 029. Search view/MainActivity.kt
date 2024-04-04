@@ -86,7 +86,7 @@ fun MyApp(modifier: Modifier = Modifier, list: List<String>) {
         LazyColumn(modifier = Modifier.padding(10.dp)) {
             items(items = list.filter {
                 it.contains(searchedText, ignoreCase = true)                // here it means list
-            },key={it}) {item->
+            },key={it}) {item->                                     //key = { manish-> manish}
                 ColumnItem(item = item)
             }
         }
