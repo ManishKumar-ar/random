@@ -54,21 +54,27 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 @Composable
 fun MyApp(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.cartoon_characters))
 
+        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.cartoon_characters))
+        //here we directly create our animation
+
+        //here we use it to check whether the animation is playing or not
         var isPlaying by remember {
             mutableStateOf(true)
         }
+
         val progress by animateLottieCompositionAsState(
             composition = composition,
             isPlaying = isPlaying
         )
+
         LaunchedEffect(key1 = progress) {
             if (progress == 0f) {
                 isPlaying = true
@@ -80,14 +86,22 @@ fun MyApp(modifier: Modifier = Modifier) {
 
         LottieAnimation(
             composition = composition,
-            modifier = Modifier.size(500.dp)
+            modifier = Modifier
+                .size(500.dp)               /// to increase the size of the animation
                 .clickable {
                     isPlaying = true
                 },
-          //  iterations = LottieConstants.IterateForever
+            // iterations = LottieConstants.IterateForever       // this is used to iterate the composition repeatedly
             progress = {
                 progress
             }
         )
+
+
     }
 }
+
+
+
+
+
