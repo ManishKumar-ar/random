@@ -57,24 +57,24 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp(modifier: Modifier = Modifier) {
+    // Mutable state variable to track the play state of the animation
+    var isPlaying by remember { mutableStateOf(true) }
+
+    // Load the Lottie animation composition
+    val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.cartoon_characters))
+
+    // Display the Lottie animation
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-
-        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.cartoon_characters))
-        //here we directly create our animation
-
-        //here we use it to check whether the animation is playing or not
-        var isPlaying by remember {
-            mutableStateOf(true)
-        }
 
         val progress by animateLottieCompositionAsState(
             composition = composition,
             isPlaying = isPlaying
         )
 
+//         Restart the animation if it reaches the end
         LaunchedEffect(key1 = progress) {
             if (progress == 0f) {
                 isPlaying = true
@@ -83,25 +83,32 @@ fun MyApp(modifier: Modifier = Modifier) {
                 isPlaying = false
             }
         }
-
         LottieAnimation(
             composition = composition,
             modifier = Modifier
-                .size(500.dp)               /// to increase the size of the animation
+                .size(500.dp)
                 .clickable {
                     isPlaying = true
                 },
-            // iterations = LottieConstants.IterateForever       // this is used to iterate the composition repeatedly
             progress = {
                 progress
+
+                //By setting progress to progress, you're essentially telling the
+                //LottieAnimation composable to display the animation at the progress specified
+                //by the progress variable.
+
             }
         )
-
-
     }
 }
 
 
+@Preview(showSystemUi = true)
+@Composable
+private fun xyz() {
+    MyApp()
+}
 
 
-
+//A progress value of 0f typically represents the animation being at the beginning or paused.
+//A progress value of 1f typically represents the animation being at the end or fully played.
