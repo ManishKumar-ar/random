@@ -23,4 +23,7 @@ for video 29
 for video 31
 ![image](https://github.com/ManishKumar-ar/random/assets/134220511/dcb0b18a-4b4b-4e5a-9fd1-f13242dbe98d)
 for video 31
+![image](https://github.com/ManishKumar-ar/random/assets/134220511/943ff37c-9eb2-4d94-916a-32c46b1c969a)
+for video 31
+
 
