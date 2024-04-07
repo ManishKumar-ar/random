@@ -102,7 +102,9 @@ private fun xyz() {
 
 
 .............................................................................
-
+//here is the code in which we want to imporve the splash screen , so that
+// if we install the app for first time - then it show the splash screen otherwise not
+//here in the below code, this feature is not available
 
 package com.example.navigation24
 
