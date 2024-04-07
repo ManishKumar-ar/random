@@ -39,10 +39,14 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(navController: NavHostController) {
 
+    // here we use the alpa value to animated our text, like partially visible to fully visible.
     val alpha = remember {
         Animatable(0f)
     }
 
+
+// whatever we write in the launched effect then composition it, execute automatically
+    
     LaunchedEffect(
         key1 = true
     ) {
