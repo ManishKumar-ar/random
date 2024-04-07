@@ -106,6 +106,11 @@ private fun xyz() {
 // if we install the app for first time - then it show the splash screen otherwise not
 //here in the below code, this feature is not available
 
+//how we do it
+//step - 1 
+// by using the shared preferences.
+//
+
 package com.example.navigation24
 
 import androidx.compose.foundation.layout.fillMaxSize
