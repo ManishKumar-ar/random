@@ -144,11 +144,16 @@ fun NavGraph2() {
 
         Scaffold(topBar = {
             TopAppBar(title = { Text(text = "drawer menu") },
+                      colors = topAppBarColors(
+                        containerColor = Color(0xFF00FF00),
+
+                    ),
                 navigationIcon = {
                     IconButton(onClick = {
                         scope.launch {
                             drawerState.open()
-                        }
+                        },
+
                     }) {
                         Icon(imageVector = Icons.Filled.Menu, contentDescription = "menu Icon")
                     }
