@@ -37,6 +37,7 @@ for video 033.0
 for video 033.0 
 ![image](https://github.com/ManishKumar-ar/random/assets/134220511/0d399fed-f3fb-482c-b85b-cd444f01519e)
 for video 035
-
+![image](https://github.com/ManishKumar-ar/random/assets/134220511/849d5b8e-5735-4fd0-8ab1-c68f66f2a4ae)
+for video 036
 
 
