@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -35,12 +36,11 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             val scrollState = rememberScrollState()
-            val scrolled by remember{
-               derivedStateOf { scrollState.value !=0 }
+            val scrolled by remember{ derivedStateOf { scrollState.value !=0 }
             }
-            Log.i("ScrollStateValue:", "current: ${scrollState.value}, max: ${scrollState.maxValue}")
+            Log.i("ScrollStateValue","current: ${scrollState.value}, max: ${scrollState.maxValue}")
+            MainUI(scrollState = scrollState)
 
-            MainUi(scrollState =  scrollState)
         }
 
     }
@@ -48,12 +48,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainUi(scrollState: ScrollState) {
-
+fun MainUI(scrollState: ScrollState) {
     Column(
         Modifier
             .fillMaxSize()
             .verticalScroll(scrollState)
+
     ) {
         Box(
             modifier = Modifier
@@ -183,3 +183,19 @@ fun MainUi(scrollState: ScrollState) {
         }
     }
 }
+
+
+@Preview
+@Composable
+private fun xyz() {
+//    MainUI(scrollState)
+}
+
+
+//it was not a lazy column
+//it is a normal column and each box represent a feature of our application
+//we are using gesture scrolling because -
+//1. we want to access to the rest of the features that are hiding
+//2. check the state of scrolling and launch.
+//==> for example, as we start scrolling, we want to hide the top app bar
+//==> or may be others things.
